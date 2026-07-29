@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuestas · La Guaira que Viene</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--azul:#1a3a5c;--verde:#16a849;--naranja:#e8620a;--gris:#4a5f78;--gris-oscuro:#2e3f55;--claro:#f4f4f6;--borde:#dcdce8;--blanco:#fff}
+body{background:var(--blanco);color:var(--gris-oscuro);font-family:'Inter',sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--azul);border-bottom:3px solid var(--naranja);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:56px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;color:var(--blanco);text-decoration:none;font-weight:700;line-height:1.2}
+.nav-logo small{display:block;font-family:'Inter',sans-serif;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.8);font-weight:700}
+.nav-logo span{color:#4de88a}
+.nav-back{font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;padding:0.35rem 0.8rem;border:1px solid rgba(255,255,255,0.3);border-radius:4px;font-weight:600}
+.hero-pag{margin-top:56px;background:var(--azul);padding:4rem 1.5rem 3rem;text-align:center;position:relative}
+.hero-pag::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--verde),var(--naranja),var(--verde))}
+.hero-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:1rem;display:block}
+.hero-pag h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3.5rem);color:var(--blanco);font-weight:900;line-height:1.1;margin-bottom:1rem}
+.hero-pag h1 em{color:#4de88a;font-style:normal}
+.hero-pag p{font-size:0.95rem;color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto;line-height:1.8;font-weight:300}
+.contenido{max-width:720px;margin:0 auto;padding:4rem 1.5rem}
+.enc-card{border:1px solid var(--borde);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.enc-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--azul);margin-bottom:1.2rem}
+.enc-card select{width:100%;background:var(--claro);border:1px solid var(--borde);border-radius:6px;padding:0.75rem 1rem;color:var(--gris-oscuro);font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;margin-bottom:1rem;transition:.2s}
+.enc-card select:focus{border-color:var(--verde)}
+.btn{display:inline-block;background:var(--azul);color:var(--blanco);font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.75rem 2rem;border-radius:6px;border:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--verde)}
+.aviso{background:#e6f9ee;border-left:3px solid var(--verde);padding:0.8rem 1rem;border-radius:0 4px 4px 0;font-size:0.85rem;color:var(--verde);margin-top:0.8rem;display:none}
+footer{background:var(--azul);border-top:3px solid var(--naranja);padding:2.5rem 1.5rem;text-align:center;margin-top:2rem}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:2.2}
+footer a{color:#4de88a;text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">🌊 La <span>Guaira</span><small>que viene</small></a>
+  <a class="nav-back" href="index.html">← Inicio</a>
+</nav>
+<div class="hero-pag">
+  <span class="hero-tag">05 · Encuestas Ciudadanas</span>
+  <h1>Tu voz<br><em>cuenta</em></h1>
+  <p>Cada respuesta llega directo al buzón de la página. Todo se lee. Todo importa.</p>
+</div>
+<div class="contenido">
+  <div class="enc-card">
+    <h3>🏗️ ¿Qué proyecto es más urgente para La Guaira?</h3>
+    <select id="enc1"><option value="">Elige una opción...</option><option>Vivienda sismo-resistente</option><option>Agua potable y cloacas</option><option>Escuelas y centros educativos</option><option>Hospital y salud pública</option><option>Mercado y empleo local</option></select>
+    <button class="btn" onclick="votar('enc1','¿Qué proyecto es más urgente?')">Votar →</button>
+    <div class="aviso" id="aviso-enc1">✅ Tu voto fue recibido. Gracias por participar.</div>
+  </div>
+  <div class="enc-card">
+    <h3>⚡ ¿Qué energía prefieres para tu vivienda?</h3>
+    <select id="enc2"><option value="">Elige una opción...</option><option>Solar (paneles fotovoltaicos)</option><option>Red eléctrica mejorada</option><option>Mixta: solar + red</option><option>Eólica</option></select>
+    <button class="btn" onclick="votar('enc2','¿Qué energía prefieres?')">Votar →</button>
+    <div class="aviso" id="aviso-enc2">✅ Tu voto fue recibido. Gracias por participar.</div>
+  </div>
+  <div class="enc-card">
+    <h3>🕊️ ¿Qué monumento quieres para La Guaira?</h3>
+    <select id="enc3"><option value="">Elige una opción...</option><option>Monumento a las raíces del litoral</option><option>Espacio de memoria a las víctimas</option><option>Plaza futurista de la reconstrucción</option><option>Jardín comunitario permanente</option></select>
+    <button class="btn" onclick="votar('enc3','¿Qué monumento quieres?')">Votar →</button>
+    <div class="aviso" id="aviso-enc3">✅ Tu voto fue recibido. Gracias por participar.</div>
+  </div>
+  <div class="enc-card">
+    <h3>🌳 ¿Qué espacio público necesitas?</h3>
+    <select id="enc4"><option value="">Elige una opción...</option><option>Parque con áreas verdes y recreación</option><option>Mercado popular al aire libre</option><option>Centro cultural y biblioteca</option><option>Cancha deportiva cubierta</option><option>Plaza con wifi público</option></select>
+    <button class="btn" onclick="votar('enc4','¿Qué espacio público necesitas?')">Votar →</button>
+    <div class="aviso" id="aviso-enc4">✅ Tu voto fue recibido. Gracias por participar.</div>
+  </div>
+</div>
+<footer>
+  <p>🌊 <strong style="color:#fff">La Guaira que Viene</strong> · <a href="index.html">Volver al inicio</a><br>
+  Marca Acas · <a href="mailto:propuestaspararenacer@gmail.com">propuestaspararenacer@gmail.com</a></p>
+</footer>
+<script>
+function votar(id,pregunta){
+  const sel=document.getElementById(id);
+  if(!sel.value){alert('Por favor elige una opción.');return;}
+  const s=encodeURIComponent('Voto: '+pregunta);
+  const b=encodeURIComponent('Pregunta: '+pregunta+'\nRespuesta: '+sel.value);
+  window.location.href='mailto:propuestaspararenacer@gmail.com?subject='+s+'&body='+b;
+  document.getElementById('aviso-'+id).style.display='block';
+}
+</script>
+</body>
+</html>

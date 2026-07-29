@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciudad Modelo · La Guaira que Viene</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--azul:#1a3a5c;--verde:#16a849;--naranja:#e8620a;--gris:#4a5f78;--gris-oscuro:#2e3f55;--claro:#f4f4f6;--borde:#dcdce8;--blanco:#fff}
+body{background:var(--blanco);color:var(--gris-oscuro);font-family:'Inter',sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--azul);border-bottom:3px solid var(--naranja);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:56px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;color:var(--blanco);text-decoration:none;font-weight:700;line-height:1.2}
+.nav-logo small{display:block;font-family:'Inter',sans-serif;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.8);font-weight:700}
+.nav-logo span{color:#4de88a}
+.nav-back{font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;padding:0.35rem 0.8rem;border:1px solid rgba(255,255,255,0.3);border-radius:4px;font-weight:600}
+.hero-pag{margin-top:56px;background:var(--azul);padding:4rem 1.5rem 3rem;text-align:center;position:relative}
+.hero-pag::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--verde),var(--naranja),var(--verde))}
+.hero-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:1rem;display:block}
+.hero-pag h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3.5rem);color:var(--blanco);font-weight:900;line-height:1.1;margin-bottom:1rem}
+.hero-pag h1 em{color:#4de88a;font-style:normal}
+.hero-pag p{font-size:0.95rem;color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto;line-height:1.8;font-weight:300}
+.contenido{max-width:860px;margin:0 auto;padding:4rem 1.5rem}
+.intro{font-size:1rem;color:var(--gris-oscuro);line-height:1.9;margin-bottom:3rem;max-width:680px}
+.fases{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;border:1px solid var(--borde);margin:2rem 0}
+.fase{padding:2rem 1.5rem;border-right:1px solid var(--borde)}
+.fase-num{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--naranja);margin-bottom:0.8rem;display:block}
+.fase h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--azul);margin-bottom:0.6rem}
+.fase .costo{font-size:0.78rem;color:var(--verde);font-weight:600;margin:0.8rem 0;display:block}
+.fase p{font-size:0.83rem;color:var(--gris);line-height:1.7}
+.titulo-sec{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--azul);margin:3rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:2px solid var(--naranja);display:inline-block}
+table{width:100%;border-collapse:collapse;font-size:0.85rem;margin:1.5rem 0}
+thead tr{background:var(--azul);color:var(--blanco)}
+thead th{padding:0.9rem 1rem;text-align:left;font-weight:600;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase}
+tbody tr{border-bottom:1px solid var(--borde)}
+tbody tr:nth-child(even){background:var(--claro)}
+tbody td{padding:0.75rem 1rem}
+.td-verde{color:var(--verde);font-weight:600}
+.principios{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;border:1px solid var(--borde);margin:2rem 0}
+.principio{padding:1.8rem 1.5rem;border-right:1px solid var(--borde)}
+.principio-icono{font-size:1.5rem;margin-bottom:0.8rem;display:block}
+.principio h3{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--azul);margin-bottom:0.5rem}
+.principio p{font-size:0.82rem;color:var(--gris);line-height:1.7}
+.cita-final{text-align:center;padding:4rem 1rem;border-top:1px solid var(--borde);margin-top:2rem}
+.cita-final p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,3vw,1.5rem);color:var(--azul);font-style:italic;line-height:1.6}
+footer{background:var(--azul);border-top:3px solid var(--naranja);padding:2.5rem 1.5rem;text-align:center;margin-top:2rem}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:2.2}
+footer a{color:#4de88a;text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">🌊 La <span>Guaira</span><small>que viene</small></a>
+  <a class="nav-back" href="index.html">← Inicio</a>
+</nav>
+<div class="hero-pag">
+  <span class="hero-tag">04 · Ciudad Modelo</span>
+  <h1>Nueva Ciudad<br><em>del Centro</em></h1>
+  <p>Corredor Aragua · Entre Caracas y Maracay · Una ciudad futurista que nace para quedarse.</p>
+</div>
+<div class="contenido">
+  <p class="intro">Una ciudad nueva, planificada desde cero, diseñada para ser moderna desde su primer ladrillo. Ubicada en el corredor más dinámico del país, nace para quedarse, para crecer y para demostrar que Venezuela construye futuro. Sus habitantes deciden. Sus habitantes construyen. Sus habitantes se quedan con lo que producen.</p>
+
+  <span class="titulo-sec">Sus principios</span>
+  <div class="principios">
+    <div class="principio"><span class="principio-icono">🏛️</span><h3>Sus habitantes deciden</h3><p>Cada barrio tiene voz real en el presupuesto. Las reglas las escriben quienes viven ahí, no funcionarios de otra ciudad.</p></div>
+    <div class="principio"><span class="principio-icono">💰</span><h3>La riqueza se queda adentro</h3><p>El comercio, la producción y los servicios los generan y disfrutan sus propios ciudadanos. Cada emprendedor construye el patrimonio colectivo.</p></div>
+    <div class="principio"><span class="principio-icono">🚀</span><h3>Futurista por diseño</h3><p>Energía solar desde la primera vivienda. Fibra óptica como servicio básico. Calles diseñadas para personas, no solo para carros.</p></div>
+    <div class="principio"><span class="principio-icono">🌍</span><h3>Conectada con el país</h3><p>Terminal intermodal con salida a Caracas, Maracay, La Guaira y Valencia. Una ciudad que mira hacia adentro muere.</p></div>
+  </div>
+
+  <span class="titulo-sec">Las 4 Fases</span>
+  <div class="fases">
+    <div class="fase"><span class="fase-num">Fase 1 · Meses 1–6</span><h3>Ciudad Habitable</h3><span class="costo">$3M–$5M USD · 500 familias</span><p>Viviendas con cocina propia, baño privado y electricidad solar desde el primer día. Espacios comerciales para fondas y negocios desde el inicio.</p></div>
+    <div class="fase"><span class="fase-num">Fase 2 · Meses 6–24</span><h3>Ciudad Económica</h3><span class="costo">$18M–$25M USD · 1.000 viviendas</span><p>Mercado municipal, escuelas operativas, zona de emprendimiento, talleres y negocios familiares. Internet de alta velocidad como servicio básico.</p></div>
+    <div class="fase"><span class="fase-num">Fase 3 · Años 2–5</span><h3>Ciudad Moderna</h3><span class="costo">$90M–$130M USD · 10.000 hab.</span><p>Terminal de transporte, hospital, universidad técnica, parques, distrito productivo y conexión con todo el país.</p></div>
+    <div class="fase"><span class="fase-num">Fase 4 · Año 5+</span><h3>Polo Nacional</h3><span class="costo">Modelo exportable</span><p>Hub de movilidad regional. Centro de convenciones. Referente que se replica en Falcón, Vargas y donde Venezuela lo necesite.</p></div>
+  </div>
+
+  <span class="titulo-sec">Transporte: La ciudad que conecta</span>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Conexión</th><th>Medio</th><th>Tiempo estimado</th></tr></thead>
+    <tbody>
+      <tr><td>Maracay</td><td>Bus eléctrico expreso</td><td class="td-verde">25–35 min</td></tr>
+      <tr><td>Caracas</td><td>Bus eléctrico expreso</td><td class="td-verde">45–60 min</td></tr>
+      <tr><td>La Guaira / Puerto</td><td>Ruta intermodal directa</td><td class="td-verde">70–90 min</td></tr>
+      <tr><td>Valencia</td><td>Expreso regional</td><td class="td-verde">60–75 min</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="cita-final">
+    <p>"Una nación que sabe construir en la crisis,<br>sabe construirse en la paz."</p>
+    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--naranja);letter-spacing:0.08em;text-transform:uppercase;font-style:normal">Brisa Citadina · Acas · Venezuela 2026</p>
+  </div>
+</div>
+<footer>
+  <p>🌊 <strong style="color:#fff">La Guaira que Viene</strong> · <a href="index.html">Volver al inicio</a><br>
+  Marca Acas · <a href="mailto:propuestaspararenacer@gmail.com">propuestaspararenacer@gmail.com</a></p>
+</footer>
+</body>
+</html>

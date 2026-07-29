@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edificios · La Guaira que Viene</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--azul:#1a3a5c;--verde:#16a849;--naranja:#e8620a;--gris:#4a5f78;--gris-oscuro:#2e3f55;--claro:#f4f4f6;--borde:#dcdce8;--blanco:#fff}
+body{background:var(--blanco);color:var(--gris-oscuro);font-family:'Inter',sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--azul);border-bottom:3px solid var(--naranja);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:56px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;color:var(--blanco);text-decoration:none;font-weight:700;line-height:1.2}
+.nav-logo small{display:block;font-family:'Inter',sans-serif;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.8);font-weight:700}
+.nav-logo span{color:#4de88a}
+.nav-back{font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;padding:0.35rem 0.8rem;border:1px solid rgba(255,255,255,0.3);border-radius:4px;font-weight:600}
+.hero-pag{margin-top:56px;background:var(--azul);padding:4rem 1.5rem 3rem;text-align:center;position:relative}
+.hero-pag::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--verde),var(--naranja),var(--verde))}
+.hero-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:1rem;display:block}
+.hero-pag h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3.5rem);color:var(--blanco);font-weight:900;line-height:1.1;margin-bottom:1rem}
+.hero-pag h1 em{color:#4de88a;font-style:normal}
+.hero-pag p{font-size:0.95rem;color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto;line-height:1.8;font-weight:300}
+.contenido{max-width:900px;margin:0 auto;padding:4rem 1.5rem}
+.nota{background:#fef0e6;border-left:3px solid var(--naranja);padding:1.2rem 1.5rem;border-radius:0 6px 6px 0;margin-bottom:3rem;font-size:0.88rem;color:var(--gris-oscuro);line-height:1.8}
+table{width:100%;border-collapse:collapse;font-size:0.85rem}
+thead tr{background:var(--azul);color:var(--blanco)}
+thead th{padding:0.9rem 1rem;text-align:left;font-weight:600;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase}
+tbody tr{border-bottom:1px solid var(--borde)}
+tbody tr:nth-child(even){background:var(--claro)}
+tbody tr:hover{background:#e6f9ee}
+tbody td{padding:0.75rem 1rem;vertical-align:top}
+.num{color:var(--naranja);font-weight:700;font-size:0.8rem}
+.nombre{color:var(--azul);font-weight:600}
+.lugar{color:var(--gris);font-size:0.82rem}
+.anio{color:var(--verde);font-weight:600}
+footer{background:var(--azul);border-top:3px solid var(--naranja);padding:2.5rem 1.5rem;text-align:center;margin-top:4rem}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:2.2}
+footer a{color:#4de88a;text-decoration:none}
+@media(max-width:600px){thead th:last-child,tbody td:last-child{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">🌊 La <span>Guaira</span><small>que viene</small></a>
+  <a class="nav-back" href="index.html">← Inicio</a>
+</nav>
+<div class="hero-pag">
+  <span class="hero-tag">03 · Edificios Rápidos</span>
+  <h1>30 edificios en<br><em>menos de un año</em></h1>
+  <p>Lo que el mundo ya sabe construir. La Guaira puede usar estas mismas tecnologías hoy.</p>
+</div>
+<div class="contenido">
+  <div class="nota">💡 <strong>Clave técnica:</strong> Los rascacielos modulares logran tiempos récord porque los componentes se fabrican fuera del sitio y se ensamblan en ritmo continuo — exactamente como se arma un automóvil en una línea de producción.</div>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>#</th><th>Nombre</th><th>Ubicación</th><th>Año</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td class="nombre">Living Building (10 pisos)</td><td class="lugar">Changsha, China</td><td class="anio">2021</td></tr>
+      <tr><td class="num">2</td><td class="nombre">Hotel Ark</td><td class="lugar">Changsha, China</td><td class="anio">2010</td></tr>
+      <tr><td class="num">3</td><td class="nombre">Hospital NHS Nightingale</td><td class="lugar">Londres, Reino Unido</td><td class="anio">2020</td></tr>
+      <tr><td class="num">4</td><td class="nombre">Hospital Huoshenshan</td><td class="lugar">Wuhan, China</td><td class="anio">2020</td></tr>
+      <tr><td class="num">5</td><td class="nombre">Hospital Leishenshan</td><td class="lugar">Wuhan, China</td><td class="anio">2020</td></tr>
+      <tr><td class="num">6</td><td class="nombre">Hotel T30</td><td class="lugar">Changsha, China</td><td class="anio">2011</td></tr>
+      <tr><td class="num">7</td><td class="nombre">Oficina del Futuro (3D)</td><td class="lugar">Dubái, EAU</td><td class="anio">2016</td></tr>
+      <tr><td class="num">8</td><td class="nombre">Mini Sky City (J57)</td><td class="lugar">Changsha, China</td><td class="anio">2015</td></tr>
+      <tr><td class="num">9</td><td class="nombre">Edificio Instacon (10 pisos)</td><td class="lugar">Mohali, India</td><td class="anio">2012</td></tr>
+      <tr><td class="num">10</td><td class="nombre">Casas 3D WinSun (10 estructuras)</td><td class="lugar">Shanghái, China</td><td class="anio">2014</td></tr>
+      <tr><td class="num">11</td><td class="nombre">WikiHouse 4.0</td><td class="lugar">Londres, Reino Unido</td><td class="anio">2014</td></tr>
+      <tr><td class="num">12</td><td class="nombre">Casa de Papel (Shigeru Ban)</td><td class="lugar">Yamanashi, Japón</td><td class="anio">1995</td></tr>
+      <tr><td class="num">13</td><td class="nombre">Icehotel (estructura anual)</td><td class="lugar">Jukkasjärvi, Suecia</td><td class="anio">Anual</td></tr>
+      <tr><td class="num">14</td><td class="nombre">Pabellón Alemán de Barcelona</td><td class="lugar">Barcelona, España</td><td class="anio">1929</td></tr>
+      <tr><td class="num">15</td><td class="nombre">Palacio de Cristal del Retiro</td><td class="lugar">Madrid, España</td><td class="anio">1887</td></tr>
+      <tr><td class="num">16</td><td class="nombre">Teatro The Globe (original)</td><td class="lugar">Londres, Reino Unido</td><td class="anio">1599</td></tr>
+      <tr><td class="num">17</td><td class="nombre">Pabellón Philips (Expo 58)</td><td class="lugar">Bruselas, Bélgica</td><td class="anio">1958</td></tr>
+      <tr><td class="num">18</td><td class="nombre">Pabellón de España (Expo 58)</td><td class="lugar">Bruselas, Bélgica</td><td class="anio">1958</td></tr>
+      <tr><td class="num">19</td><td class="nombre">Space Needle</td><td class="lugar">Seattle, EE.UU.</td><td class="anio">1961</td></tr>
+      <tr><td class="num">20</td><td class="nombre">The Crystal Palace</td><td class="lugar">Londres, Reino Unido</td><td class="anio">1851</td></tr>
+      <tr><td class="num">21</td><td class="nombre">Estadio Centenario</td><td class="lugar">Montevideo, Uruguay</td><td class="anio">1930</td></tr>
+      <tr><td class="num">22</td><td class="nombre">Estadio de Wembley (original)</td><td class="lugar">Londres, Reino Unido</td><td class="anio">1923</td></tr>
+      <tr><td class="num">23</td><td class="nombre">Nakagin Capsule Tower</td><td class="lugar">Tokio, Japón</td><td class="anio">1972</td></tr>
+      <tr><td class="num">24</td><td class="nombre">Kaufmann Desert House</td><td class="lugar">Palm Springs, EE.UU.</td><td class="anio">1946</td></tr>
+      <tr><td class="num">25</td><td class="nombre">Reliance Building</td><td class="lugar">Chicago, EE.UU.</td><td class="anio">1895</td></tr>
+      <tr><td class="num">26</td><td class="nombre">Seed Cathedral (Expo 2010)</td><td class="lugar">Shanghái, China</td><td class="anio">2010</td></tr>
+      <tr><td class="num">27</td><td class="nombre">Villa Impresa en 3D WinSun</td><td class="lugar">Suzhou, China</td><td class="anio">2015</td></tr>
+      <tr><td class="num">28</td><td class="nombre">Casa Dymaxion (Buckminster Fuller)</td><td class="lugar">Wichita, EE.UU.</td><td class="anio">1945</td></tr>
+      <tr><td class="num">29</td><td class="nombre">Casas Prefabricadas Lustron</td><td class="lugar">Varias ciudades, EE.UU.</td><td class="anio">1948</td></tr>
+      <tr><td class="num">30</td><td class="nombre">Pabellón Eiffel · Exposición Universal</td><td class="lugar">París, Francia</td><td class="anio">1889</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+<footer>
+  <p>🌊 <strong style="color:#fff">La Guaira que Viene</strong> · <a href="index.html">Volver al inicio</a><br>
+  Marca Acas · <a href="mailto:propuestaspararenacer@gmail.com">propuestaspararenacer@gmail.com</a></p>
+</footer>
+</body>
+</html>

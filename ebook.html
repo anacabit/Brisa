@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebook · La Guaira que Viene</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--azul:#1a3a5c;--verde:#16a849;--naranja:#e8620a;--gris:#4a5f78;--gris-oscuro:#2e3f55;--claro:#f4f4f6;--borde:#dcdce8;--blanco:#fff}
+body{background:var(--blanco);color:var(--gris-oscuro);font-family:'Inter',sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--azul);border-bottom:3px solid var(--naranja);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:56px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;color:var(--blanco);text-decoration:none;font-weight:700;line-height:1.2}
+.nav-logo small{display:block;font-family:'Inter',sans-serif;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.8);font-weight:700}
+.nav-logo span{color:#4de88a}
+.nav-back{font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;padding:0.35rem 0.8rem;border:1px solid rgba(255,255,255,0.3);border-radius:4px;font-weight:600}
+.hero-pag{margin-top:56px;background:var(--azul);padding:4rem 1.5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.hero-pag::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--verde),var(--naranja),var(--verde))}
+.hero-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:1rem;display:block}
+.hero-pag h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3.5rem);color:var(--blanco);font-weight:900;line-height:1.1;margin-bottom:1rem}
+.hero-pag h1 em{color:#4de88a;font-style:normal}
+.hero-pag p{font-size:0.95rem;color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto;line-height:1.8;font-weight:300}
+.contenido{max-width:860px;margin:0 auto;padding:4rem 1.5rem}
+.cap-titulo{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--azul);margin:3rem 0 1.5rem;padding-bottom:0.8rem;border-bottom:2px solid var(--naranja);display:inline-block}
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;border:1px solid var(--borde);margin-bottom:3rem}
+.tarjeta{padding:2rem 1.5rem;border-right:1px solid var(--borde)}
+.tarjeta-icono{font-size:1.8rem;margin-bottom:1rem;display:block}
+.tarjeta h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--azul);margin-bottom:0.5rem}
+.tarjeta .dato{font-size:0.78rem;color:var(--naranja);font-weight:600;margin-bottom:0.6rem;display:block;letter-spacing:0.04em}
+.tarjeta p{font-size:0.83rem;color:var(--gris);line-height:1.7}
+.caja-verde{background:#e6f9ee;border-left:3px solid var(--verde);padding:1.5rem;border-radius:0 6px 6px 0;margin:2rem 0}
+.caja-verde p{font-size:0.9rem;color:var(--gris-oscuro);line-height:1.9;margin:0}
+.caja-naranja{background:#fef0e6;border-left:3px solid var(--naranja);padding:1.5rem;border-radius:0 6px 6px 0;margin:2rem 0}
+.caja-naranja p{font-size:0.9rem;color:var(--gris-oscuro);line-height:1.9;margin:0}
+.lista-check{list-style:none;padding:0;display:grid;gap:0.6rem;margin:1.5rem 0}
+.lista-check li{font-size:0.88rem;color:var(--gris-oscuro);padding:0.6rem 0.8rem;background:var(--claro);border-radius:4px;border-left:3px solid var(--verde)}
+.cita-final{text-align:center;padding:4rem 1rem;border-top:1px solid var(--borde);margin-top:2rem}
+.cita-final blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,3vw,1.5rem);color:var(--azul);font-style:italic;line-height:1.6;margin-bottom:1rem}
+.cita-final cite{font-size:0.8rem;color:var(--gris)}
+footer{background:var(--azul);border-top:3px solid var(--naranja);padding:2.5rem 1.5rem;text-align:center}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:2.2}
+footer a{color:#4de88a;text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">🌊 La <span>Guaira</span><small>que viene</small></a>
+  <a class="nav-back" href="index.html">← Inicio</a>
+</nav>
+<div class="hero-pag">
+  <span class="hero-tag">02 · Ebook</span>
+  <h1>Construir<br><em>el Futuro</em></h1>
+  <p>Datos, récords y curiosidades de la construcción mundial. Lo que Venezuela y La Guaira pueden aprender y aplicar hoy.</p>
+</div>
+<div class="contenido">
+  <div class="caja-naranja"><p>📖 <strong>Este ebook nació de una necesidad concreta:</strong> entender qué herramientas tiene el mundo para construir rápido, seguro y bien. Porque si el mundo ya sabe cómo hacerlo, la pregunta es por qué no lo aplicamos donde más se necesita.</p></div>
+
+  <span class="cap-titulo">Capítulo 1 · Los Edificios Más Rápidos del Mundo</span>
+  <div class="tarjetas">
+    <div class="tarjeta"><span class="tarjeta-icono">🏗️</span><h3>Broad Group — 10 Pisos</h3><span class="dato">28 horas 45 min · Changsha, China · 2012</span><p>Diez pisos ensamblados en menos de un día. Módulos de acero fabricados en fábrica, instalados como piezas de automóvil. Un piso cada 3 horas. Escala hasta 200 pisos.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🏙️</span><h3>Mini Sky City — 57 Pisos</h3><span class="dato">19 días · Changsha, China · 2015</span><p>Un rascacielos completo en menos de tres semanas. 3 pisos por día. 800 apartamentos. Espacio para 4.000 personas en 186.000 m².</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🏨</span><h3>Hotel de 15 Pisos</h3><span class="dato">48 horas · China · 2011</span><p>Completamente funcional desde el primer día — instalaciones, acabados, agua y electricidad integrados desde el origen.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🏥</span><h3>Hospital Huoshenshan</h3><span class="dato">10 días · Wuhan, China · 2020</span><p>1.000 camas operativas. Estructuras metálicas sin cemento. UCI, quirófanos y zonas de aislamiento completos. Desmontable al finalizar.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🗽</span><h3>Empire State Building</h3><span class="dato">410 días · Nueva York · 1931</span><p>102 pisos en 13 meses sin computadoras. 3.400 obreros simultáneos. Un piso cada 4.5 días. Terminado antes de lo previsto.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🔮</span><h3>Crystal Palace</h3><span class="dato">190 días · Londres · 1851</span><p>92.000 m² de hierro y vidrio en 6 meses. Diseñado por un jardinero. Precursor directo de la arquitectura modular moderna.</p></div>
+  </div>
+
+  <span class="cap-titulo">Capítulo 2 · Tecnologías que Hacen Posible la Velocidad</span>
+  <div class="tarjetas">
+    <div class="tarjeta"><span class="tarjeta-icono">⚙️</span><h3>Estructura de Acero</h3><p>Flexible y resistente. En un terremoto flexiona sin romperse. Material preferido en Japón, Chile y California.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🛡️</span><h3>Aisladores Sísmicos</h3><p>Se colocan entre el edificio y sus cimientos. Absorben la energía del terremoto antes de que llegue a la estructura.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🔧</span><h3>Amortiguadores Sísmicos</h3><p>Convierten la vibración en calor. Invisibles dentro de la estructura pero activos durante cualquier movimiento.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🧩</span><h3>Construcción Modular</h3><p>Módulos fabricados en fábrica con exactitud milimétrica. Las uniones diseñadas para cargas sísmicas hacen al edificio sólido y flexible.</p></div>
+  </div>
+  <div class="caja-verde"><p>⚡ <strong>La combinación ideal para La Guaira:</strong> Módulos prefabricados de acero · Aisladores sísmicos en la base · Amortiguadores integrados · Diseño certificado antisísmico · Agua y energía integrados desde el origen</p></div>
+
+  <span class="cap-titulo">Capítulo 3 · Países que Lideran</span>
+  <div class="tarjetas">
+    <div class="tarjeta"><span class="tarjeta-icono">🇯🇵</span><h3>Japón</h3><p>Líder mundial antisísmico. Enfrenta más del 20% de los terremotos más poderosos del planeta. Sus edificios soportan magnitud 8.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🇨🇳</span><h3>China</h3><p>La potencia de la velocidad. Industria modular más avanzada del mundo. Rapidez y calidad van juntas.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🇨🇱</span><h3>Chile</h3><p>El referente latinoamericano. El país más sísmico del mundo en frecuencia. Modelo directo aplicable a Venezuela.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🇳🇿</span><h3>Nueva Zelanda</h3><p>Tras Christchurch 2011, se convirtió en modelo mundial de reconstrucción urbana participativa.</p></div>
+  </div>
+
+  <span class="cap-titulo">Capítulo 4 · Datos Curiosos</span>
+  <div class="tarjetas">
+    <div class="tarjeta"><span class="tarjeta-icono">💧</span><h3>Segundo material más consumido</h3><p>Solo el agua supera al cemento. La construcción genera el 34% de las emisiones globales de CO₂.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🚗</span><h3>Edificios como automóviles</h3><p>BROAD Group fabrica edificios en línea de producción con control de calidad, como si fueran vehículos.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🌱</span><h3>Lo diseñó un jardinero</h3><p>El Crystal Palace de 1851 fue diseñado por Joseph Paxton, jardinero del Duque de Devonshire. Cambió la arquitectura para siempre.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">♻️</span><h3>Escombros = material nuevo</h3><p>Un edificio demolido correctamente convierte hasta el 90% de sus materiales en recursos para el siguiente. Los escombros de La Guaira son riqueza.</p></div>
+    <div class="tarjeta"><span class="tarjeta-icono">🚢</span><h3>Llegan por el puerto</h3><p>Los módulos de construcción caben en contenedores marítimos estándar. Una fábrica en China puede enviarlos directo al puerto de La Guaira.</p></div>
+  </div>
+
+  <span class="cap-titulo">Capítulo 5 · Lo que La Guaira Puede Aplicar</span>
+  <ul class="lista-check">
+    <li>✅ Estructura de acero o concreto reforzado con diseño antisísmico certificado</li>
+    <li>✅ Cimentación adecuada al suelo costero — factor crítico en zonas litorales</li>
+    <li>✅ Sistemas modulares prefabricados para acelerar tiempos de entrega</li>
+    <li>✅ Cisternas subterráneas con bombeo solar — sin tanques elevados, sin riesgo sísmico adicional</li>
+    <li>✅ Normativa local actualizada a estándares internacionales</li>
+    <li>✅ Participación ciudadana en la planificación — quien vive ahí sabe más que nadie</li>
+  </ul>
+
+  <div class="cita-final">
+    <blockquote>"Si dispones de un lienzo en blanco,<br>puedes imaginar de nuevo."</blockquote>
+    <cite>— Arquitecto Bjarke Ingels</cite>
+    <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--naranja);letter-spacing:0.08em;text-transform:uppercase">Propuestas para La Guaira · ACAS · Venezuela 2026</p>
+  </div>
+</div>
+<footer>
+  <p>🌊 <strong style="color:#fff">La Guaira que Viene</strong> · <a href="index.html">Volver al inicio</a><br>
+  Marca Acas · <a href="mailto:propuestaspararenacer@gmail.com">propuestaspararenacer@gmail.com</a></p>
+</footer>
+</body>
+</html>
