@@ -3,305 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Héroes y Sobrevivientes — La Guaira que Viene</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<title>Héroes · La Guaira que Viene</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--azul:#0A2540;--azul2:#1A3A5C;--verde:#00A86B;--verde2:#007A4D;--dorado:#C9A84C;--gris:#F4F6F9;--gris2:#E8ECF0;--gris3:#8A9BB0;--blanco:#FFFFFF;--texto:#1A2332}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;color:var(--texto);background:var(--gris);line-height:1.6}
-
-nav{background:rgba(10,37,64,.97);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:100}
-.logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
-.logo-icon{width:32px;height:32px;background:var(--verde);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem}
-.logo-text{color:#fff;font-weight:700;font-size:.9rem;line-height:1.1}
-.logo-text span{display:block;font-weight:300;font-size:.6rem;color:#8A9BB0;letter-spacing:.08em;text-transform:uppercase}
-.btn-volver{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);padding:.4rem .9rem;border-radius:6px;font-size:.75rem;font-weight:600;cursor:pointer;text-decoration:none}
-.btn-volver:hover{border-color:#fff}
-
-/* HERO */
-.hero{background:linear-gradient(135deg,#06172A,var(--azul));padding:3rem 1.5rem;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.08) 0%,transparent 70%)}
-.hero-inner{position:relative;z-index:1}
-.eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--dorado);margin-bottom:.6rem}
-h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;color:#fff;margin-bottom:.7rem;line-height:1.2}
-h1 em{color:var(--dorado);font-style:normal}
-.hero-desc{font-size:.88rem;color:rgba(255,255,255,.65);max-width:540px;margin:0 auto 1.5rem;line-height:1.7}
-.hero-frase{display:inline-block;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--dorado);font-size:.8rem;font-style:italic;padding:.6rem 1.2rem;border-radius:8px;max-width:480px;line-height:1.5}
-
-/* BANNER */
-.banner-pub{margin:1.2rem 1.5rem;background:#fff;border:2px dashed var(--gris2);border-radius:12px;padding:1.2rem;text-align:center}
-.banner-tipo{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--verde);margin-bottom:.3rem}
-.banner-tit{font-size:.95rem;font-weight:700;color:var(--azul);margin-bottom:.2rem}
-.banner-dim{margin-top:.6rem;background:var(--gris);border:1px dashed var(--gris2);border-radius:6px;padding:.6rem;font-size:.65rem;color:var(--gris3)}
-
-.contenido{max-width:900px;margin:0 auto;padding:1.2rem 1.5rem}
-
-.section-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--verde);margin-bottom:.5rem}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,4vw,1.8rem);font-weight:700;color:var(--azul);margin-bottom:.4rem;line-height:1.2}
-.section-desc{font-size:.82rem;color:var(--gris3);line-height:1.6;margin-bottom:1.2rem}
-
-/* CATEGORIAS HEROES */
-.heroes-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-bottom:1.5rem}
-@media(min-width:600px){.heroes-grid{grid-template-columns:repeat(2,1fr)}}
-.heroe-card{background:#fff;border-radius:14px;padding:1.3rem;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:4px solid var(--dorado);transition:transform .2s,box-shadow .2s}
-.heroe-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
-.heroe-emoji{font-size:2rem;margin-bottom:.6rem}
-.heroe-titulo{font-weight:700;font-size:.95rem;color:var(--azul);margin-bottom:.4rem}
-.heroe-desc{font-size:.78rem;color:#555;line-height:1.6}
-.heroe-detalle{margin-top:.7rem;padding:.6rem .8rem;background:var(--gris);border-radius:6px;font-size:.73rem;color:var(--azul2);line-height:1.5}
-
-/* MONUMENTO */
-.monumento-box{background:linear-gradient(135deg,var(--azul),#0D3B6E);border-radius:14px;padding:1.5rem;color:#fff;margin-bottom:1.5rem;text-align:center}
-.mon-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--dorado);margin-bottom:.5rem}
-.mon-titulo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.6rem;line-height:1.2}
-.mon-desc{font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:1rem;max-width:500px;margin-left:auto;margin-right:auto}
-.mon-ideas{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
-.mon-idea{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.7rem 1rem;font-size:.78rem;color:rgba(255,255,255,.85);text-align:left;display:flex;gap:.6rem;align-items:flex-start}
-.btn-mon{display:inline-block;background:var(--dorado);color:#fff;padding:.65rem 1.4rem;border-radius:8px;font-weight:600;font-size:.82rem;text-decoration:none;border:none;cursor:pointer;transition:background .2s}
-.btn-mon:hover{background:#B8973A}
-
-/* ENCUESTA */
-.encuesta-box{background:#fff;border-radius:14px;padding:1.3rem;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:1.5rem}
-.enc-titulo{font-weight:700;font-size:.95rem;color:var(--azul);margin-bottom:1rem}
-.opciones{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
-.opcion{display:flex;align-items:center;gap:.7rem;padding:.65rem .9rem;border:1.5px solid var(--gris2);border-radius:8px;cursor:pointer;transition:all .2s;font-size:.82rem;font-weight:500}
-.opcion:hover,.opcion.sel{border-color:var(--dorado);background:rgba(201,168,76,.06);color:var(--azul)}
-.opcion-dot{width:15px;height:15px;border-radius:50%;border:2px solid var(--gris2);flex-shrink:0;transition:all .2s}
-.opcion.sel .opcion-dot{border-color:var(--dorado);background:var(--dorado)}
-.btn-votar{background:var(--dorado);color:#fff;border:none;padding:.7rem;border-radius:8px;font-weight:600;font-size:.85rem;cursor:pointer;width:100%}
-.resultado{display:none;margin-top:1rem}
-.res-item{margin-bottom:.5rem;font-size:.75rem}
-.res-label{display:flex;justify-content:space-between;color:var(--azul);font-weight:500;margin-bottom:.2rem}
-.barra-bg{background:var(--gris2);border-radius:4px;height:5px}
-.barra-fill{height:5px;border-radius:4px;background:var(--dorado);transition:width .8s}
-
-/* ONG REGISTRO */
-.ong-box{background:#fff;border-radius:14px;padding:1.3rem;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:1.5rem;border-left:4px solid var(--verde)}
-.ong-titulo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--azul);margin-bottom:.3rem}
-.ong-desc{font-size:.78rem;color:var(--gris3);margin-bottom:1rem;line-height:1.5}
-.campo{width:100%;background:var(--gris);border:1.5px solid var(--gris2);border-radius:8px;padding:.65rem .9rem;font-size:.8rem;font-family:'Inter',sans-serif;color:var(--texto);outline:none;transition:border-color .2s;margin-bottom:.6rem}
-.campo:focus{border-color:var(--verde)}
-textarea.campo{resize:vertical;min-height:100px;line-height:1.6}
-select.campo{cursor:pointer}
-.btn-registrar{background:var(--verde);color:#fff;border:none;padding:.7rem;border-radius:8px;font-weight:600;font-size:.83rem;cursor:pointer;width:100%;transition:background .2s}
-.btn-registrar:hover{background:var(--verde2)}
-.aviso{font-size:.68rem;color:var(--gris3);margin-top:.5rem;line-height:1.5;text-align:center}
-
-/* TESTIMONIOS */
-.testimonios-box{background:#fff;border-radius:14px;padding:1.3rem;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:1.5rem}
-.test-titulo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--azul);margin-bottom:.3rem}
-.test-desc{font-size:.78rem;color:var(--gris3);margin-bottom:1rem;line-height:1.5}
-.aviso-verificacion{background:rgba(0,168,107,.06);border:1px solid rgba(0,168,107,.2);border-radius:8px;padding:.7rem .9rem;font-size:.73rem;color:var(--verde2);margin-bottom:1rem;line-height:1.5}
-
-/* BANNER LATERAL */
-.banner-lateral{background:#fff;border:2px dashed var(--gris2);border-radius:12px;padding:1.1rem;text-align:center;margin-bottom:1rem}
-.bl-tipo{font-size:.57rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--verde);margin-bottom:.2rem}
-.bl-tit{font-size:.85rem;font-weight:700;color:var(--azul);margin-bottom:.2rem}
-.bl-dim{margin-top:.5rem;background:var(--gris);border:1px dashed var(--gris2);border-radius:5px;padding:.5rem;font-size:.63rem;color:var(--gris3)}
-
-footer{background:var(--azul);color:rgba(255,255,255,.5);text-align:center;padding:1.5rem;font-size:.72rem;line-height:1.8;margin-top:1rem}
-footer a{color:var(--dorado);text-decoration:none}
-footer strong{color:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--azul:#1a3a5c;--verde:#16a849;--naranja:#e8620a;--gris:#4a5f78;--gris-oscuro:#2e3f55;--claro:#f4f4f6;--borde:#dcdce8;--blanco:#fff}
+body{background:var(--blanco);color:var(--gris-oscuro);font-family:'Inter',sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--azul);border-bottom:3px solid var(--naranja);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:56px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;color:var(--blanco);text-decoration:none;font-weight:700;line-height:1.2}
+.nav-logo small{display:block;font-family:'Inter',sans-serif;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.8);font-weight:700}
+.nav-logo span{color:#4de88a}
+.nav-back{font-size:0.72rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;padding:0.35rem 0.8rem;border:1px solid rgba(255,255,255,0.3);border-radius:4px;font-weight:600;transition:.2s}
+.nav-back:hover{background:rgba(255,255,255,0.15);color:var(--blanco)}
+.hero-pag{margin-top:56px;background:var(--azul);padding:4rem 1.5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.hero-pag::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--verde),var(--naranja),var(--verde))}
+.hero-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:1rem;display:block}
+.hero-pag h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3.5rem);color:var(--blanco);font-weight:900;line-height:1.1;margin-bottom:1rem}
+.hero-pag h1 em{color:#4de88a;font-style:normal}
+.hero-pag p{font-size:0.95rem;color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto;line-height:1.8;font-weight:300}
+.contenido{max-width:860px;margin:0 auto;padding:4rem 1.5rem}
+.seccion{margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid var(--borde)}
+.seccion:last-child{border-bottom:none}
+.sec-num{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--naranja);margin-bottom:0.8rem;display:block}
+.seccion h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--azul);margin-bottom:1.2rem;line-height:1.3}
+.seccion p{font-size:0.92rem;color:var(--gris-oscuro);line-height:1.9;margin-bottom:1rem}
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;border:1px solid var(--borde);margin-top:2rem}
+.tarjeta{padding:2rem 1.5rem;border-right:1px solid var(--borde)}
+.tarjeta-icono{font-size:1.8rem;margin-bottom:1rem;display:block}
+.tarjeta h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--azul);margin-bottom:0.6rem}
+.tarjeta p{font-size:0.83rem;color:var(--gris);line-height:1.7}
+.cita{background:var(--claro);border-left:3px solid var(--verde);padding:1.5rem 1.5rem;border-radius:0 6px 6px 0;margin:2rem 0}
+.cita p{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--azul);font-style:italic;line-height:1.7;margin:0}
+.foto-banda{width:100%;height:280px;object-fit:cover;display:block;margin:2rem 0}
+footer{background:var(--azul);border-top:3px solid var(--naranja);padding:2.5rem 1.5rem;text-align:center}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.6);line-height:2.2}
+footer a{color:#4de88a;text-decoration:none}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html" class="logo">
-    <div class="logo-icon">🌊</div>
-    <div class="logo-text">La Guaira que Viene<span>Propuestas para Renacer</span></div>
-  </a>
-  <a href="index.html" class="btn-volver">← Volver</a>
+  <a class="nav-logo" href="index.html">🌊 La <span>Guaira</span><small>que viene</small></a>
+  <a class="nav-back" href="index.html">← Inicio</a>
 </nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Reconocimiento y gratitud</div>
-    <h1>Héroes y<br><em>Sobrevivientes</em></h1>
-    <p class="hero-desc">Esta página es un espacio de reconocimiento para todos los que respondieron al llamado, los que siguen ahí, y los que vivieron para contarlo. Su historia forma parte de la historia de La Guaira.</p>
-    <div class="hero-frase">"No hay mayor valentía que la de quien da todo por otro sin esperar nada a cambio."</div>
-  </div>
+<div class="hero-pag">
+  <span class="hero-tag">01 · Héroes y Rescatistas</span>
+  <h1>Los que llegaron<br><em>primero</em></h1>
+  <p>Cuando la tierra tembló, ellos ya estaban en camino. Sin que nadie los llamara. Sin saber si regresarían.</p>
 </div>
-
-<!-- BANNER SUPERIOR -->
-<div class="banner-pub">
-  <div class="banner-tipo">Banner Superior · Publicidad · Sección Héroes</div>
-  <div class="banner-tit">Tu empresa aquí</div>
-  <div class="banner-dim">📐 970 × 90 px · Banner horizontal · <a href="mailto:propuestaspararenacer@gmail.com?subject=Publicidad Heroes" style="color:var(--verde)">Reservar espacio →</a></div>
-</div>
-
 <div class="contenido">
-
-  <!-- HEROES POR CATEGORIA -->
-  <div class="section-eyebrow">Quiénes respondieron</div>
-  <div class="section-title">Los que estuvieron ahí</div>
-  <p class="section-desc">Sin nombrar personas individuales — porque todos merecen el mismo reconocimiento — esta es la historia de quienes hicieron posible los rescates.</p>
-
-  <div class="heroes-grid">
-    <div class="heroe-card">
-      <div class="heroe-emoji">🚒</div>
-      <div class="heroe-titulo">Cuerpos de Bomberos</div>
-      <p class="heroe-desc">Equipos nacionales que trabajaron sin descanso entre los escombros, arriesgando sus vidas para salvar a otros.</p>
-      <div class="heroe-detalle">⏱️ Presencia continua desde las primeras horas del 24 de junio de 2026</div>
-    </div>
-    <div class="heroe-card">
-      <div class="heroe-emoji">🛡️</div>
-      <div class="heroe-titulo">Protección Civil</div>
-      <p class="heroe-desc">Personal de protección civil que coordinó los esfuerzos de rescate en las 5 zonas del litoral central venezolano.</p>
-      <div class="heroe-detalle">🗺️ Coordinación en Playa Grande, Macuto, Caraballeda, Tanaguarena y Naiguatá</div>
-    </div>
-    <div class="heroe-card">
-      <div class="heroe-emoji">🏥</div>
-      <div class="heroe-titulo">Personal de Salud</div>
-      <p class="heroe-desc">Médicos, enfermeros y paramédicos que atendieron a los heridos en condiciones extremadamente difíciles.</p>
-      <div class="heroe-detalle">❤️ Atención de emergencia en hospitales improvisados y centros de acopio</div>
-    </div>
-    <div class="heroe-card">
-      <div class="heroe-emoji">🌍</div>
-      <div class="heroe-titulo">Equipos Internacionales</div>
-      <p class="heroe-desc">Rescatistas de El Salvador, México y otros países que viajaron para ayudar sin conocer a nadie, solo movidos por la solidaridad.</p>
-      <div class="heroe-detalle">✈️ Operaciones internacionales en Tanaguarena y Caraballeda</div>
-    </div>
-    <div class="heroe-card">
-      <div class="heroe-emoji">🤝</div>
-      <div class="heroe-titulo">Voluntarios Ciudadanos</div>
-      <p class="heroe-desc">Ciudadanos comunes que sin entrenamiento formal respondieron con sus manos, su corazón y todo lo que tenían.</p>
-      <div class="heroe-detalle">💪 Miles de voluntarios en todas las zonas del litoral</div>
-    </div>
-    <div class="heroe-card">
-      <div class="heroe-emoji">🏢</div>
-      <div class="heroe-titulo">Sector Privado</div>
-      <p class="heroe-desc">Empresas y organizaciones privadas que donaron maquinaria, alimentos, medicamentos y recursos humanos para el rescate.</p>
-      <div class="heroe-detalle">📦 Apoyo logístico y donaciones desde el primer día</div>
+  <div class="seccion">
+    <span class="sec-num">Bomberos y Protección Civil</span>
+    <h2>Los primeros en llegar</h2>
+    <p>Trabajaron días seguidos sin descanso en las zonas más peligrosas del litoral. Entraron a estructuras que todavía se movían. Sacaron personas de lugares donde ninguna máquina cabía. Son el primer anillo de respuesta de Venezuela y el 24 de junio de 2026 demostraron por qué.</p>
+    <div class="cita"><p>"El trabajo de un bombero no termina cuando para el temblor. Termina cuando el último afectado está a salvo."</p></div>
+  </div>
+  <div class="seccion">
+    <span class="sec-num">Equipos Internacionales</span>
+    <h2>El mundo respondió</h2>
+    <p>Equipos especializados de rescate llegaron desde distintos países con perros de búsqueda, equipos de detección de vida, herramientas de corte y médicos de emergencia. La solidaridad internacional no esperó trámites.</p>
+    <div class="tarjetas">
+      <div class="tarjeta"><span class="tarjeta-icono">🇸🇻</span><h3>El Salvador</h3><p>Equipo de rescate urbano con experiencia en terremotos de alta magnitud.</p></div>
+      <div class="tarjeta"><span class="tarjeta-icono">🇲🇽</span><h3>México</h3><p>Brigadas de búsqueda y rescate con perros especializados en estructuras colapsadas.</p></div>
+      <div class="tarjeta"><span class="tarjeta-icono">🇧🇷</span><h3>Brasil</h3><p>Equipos médicos de emergencia y logística de suministros humanitarios.</p></div>
+      <div class="tarjeta"><span class="tarjeta-icono">🇮🇹</span><h3>Italia</h3><p>Especialistas en estabilización de estructuras y rescate en zonas de riesgo.</p></div>
     </div>
   </div>
-
-  <!-- BANNER MEDIO -->
-  <div class="banner-lateral" style="margin-bottom:1.5rem">
-    <div class="bl-tipo">Banner Medio · Publicidad</div>
-    <div class="bl-tit">Tu empresa aquí</div>
-    <div class="bl-dim">📐 728 × 90 px · Banner horizontal · <a href="mailto:propuestaspararenacer@gmail.com?subject=Publicidad Heroes Medio" style="color:var(--verde)">Reservar →</a></div>
+  <div class="seccion">
+    <span class="sec-num">Voluntarios Ciudadanos</span>
+    <h2>Sin entrenamiento. Con todo el valor.</h2>
+    <p>Vecinos que cavaron con sus manos. Jóvenes que cargaron escombros toda la noche. Personas que perdieron su propia casa y aun así fueron a ayudar al de al lado. No tenían equipo profesional. Tenían algo más difícil de fabricar: la decisión de actuar.</p>
+    <p>Su presencia salvó vidas que ningún sistema hubiera encontrado a tiempo. Conocían los callejones, sabían dónde vivía quién, recordaban qué casas tenían sótanos. Ese conocimiento local fue tan valioso como cualquier maquinaria.</p>
   </div>
-
-  <!-- ONG -->
-  <div class="section-eyebrow" style="margin-top:.5rem">Organizaciones</div>
-  <div class="section-title">Las ONG que supieron qué hacer</div>
-  <p class="section-desc">En los momentos más difíciles, las organizaciones no gubernamentales fueron las primeras en llegar con soluciones concretas.</p>
-
-  <div class="heroes-grid" style="margin-bottom:1.5rem">
-    <div class="heroe-card" style="border-top-color:var(--verde)">
-      <div class="heroe-emoji">🌱</div>
-      <div class="heroe-titulo">ONG de Ayuda Humanitaria</div>
-      <p class="heroe-desc">Organizaciones especializadas en emergencias que coordinaron la distribución de alimentos, agua y refugio temporal.</p>
-      <div class="heroe-detalle">📋 Registro y atención de familias damnificadas</div>
-    </div>
-    <div class="heroe-card" style="border-top-color:var(--verde)">
-      <div class="heroe-emoji">🧠</div>
-      <div class="heroe-titulo">ONG de Salud Mental</div>
-      <p class="heroe-desc">Psicólogos y trabajadores sociales que acompañaron a sobrevivientes en el proceso de duelo y trauma.</p>
-      <div class="heroe-detalle">💙 Atención emocional en refugios y comunidades</div>
-    </div>
+  <div class="seccion">
+    <span class="sec-num">ONG y Organizaciones</span>
+    <h2>Presencia cuando el tiempo apretaba</h2>
+    <p>Alimentos, medicinas, albergue temporal, apoyo psicológico. Las organizaciones no gubernamentales supieron exactamente qué hacer y cómo hacerlo. Llegaron con estructuras, con redes, con experiencia acumulada en otras emergencias.</p>
   </div>
-
-  <!-- REGISTRO ONG -->
-  <div class="ong-box">
-    <div class="ong-titulo">¿Eres parte de una ONG que participó?</div>
-    <p class="ong-desc">Regístrense aquí para aparecer en nuestra página de reconocimiento. Verificaremos la información antes de publicarla.</p>
-    <input type="text" class="campo" placeholder="Nombre oficial de la organización">
-    <input type="text" class="campo" placeholder="Tipo de organización (humanitaria, salud, educación...)">
-    <input type="text" class="campo" placeholder="País de origen">
-    <input type="text" class="campo" placeholder="Zona donde operaron">
-    <input type="email" class="campo" placeholder="Correo oficial de contacto">
-    <input type="url" class="campo" placeholder="Sitio web o red social oficial (opcional)">
-    <textarea class="campo" placeholder="Describa brevemente el trabajo realizado durante el rescate..."></textarea>
-    <button class="btn-registrar" onclick="alert('¡Gracias! Hemos recibido el registro de su organización. Lo verificaremos y nos pondremos en contacto pronto.')">Registrar organización →</button>
-    <p class="aviso">⚠️ Toda la información será verificada antes de ser publicada. Este es un espacio de reconocimiento serio y responsable.</p>
+  <div class="seccion">
+    <span class="sec-num">Los Sobrevivientes</span>
+    <h2>La fuerza más real de La Guaira</h2>
+    <p>Los que perdieron todo y aun así ayudaron al vecino. Los que contaron lo que vivieron para que el mundo entendiera. Los que hoy siguen en pie, reconstruyendo, exigiendo, proponiendo. Son el corazón de esta página y la razón de cada propuesta aquí.</p>
+    <div class="cita"><p>"Una ciudad no la construyen los planos. La construyen las personas que deciden quedarse."</p></div>
   </div>
-
-  <!-- MONUMENTO -->
-  <div class="monumento-box">
-    <div class="mon-eyebrow">Proyecto ciudadano</div>
-    <div class="mon-titulo">🕊️ Monumento a los Caídos y los Héroes</div>
-    <p class="mon-desc">La Guaira merece un espacio permanente de memoria y gratitud. Un lugar donde las generaciones futuras puedan conocer lo que sucedió y honrar a quienes respondieron.</p>
-    <div class="mon-ideas">
-      <div class="mon-idea">🌳 <span><strong>Árbol de la Memoria</strong> — Escultura de metal con hojas que representan cada vida perdida y cada héroe que respondió</span></div>
-      <div class="mon-idea">💧 <span><strong>Espejo de Agua</strong> — Plaza con agua tranquila que refleja el cielo, símbolo de paz y memoria colectiva</span></div>
-      <div class="mon-idea">🌿 <span><strong>Raíces Entrelazadas</strong> — Escultura que muestra lo que el terremoto no pudo romper: los lazos entre la gente</span></div>
-    </div>
-    <button class="btn-mon" onclick="alert('Tu voto por el monumento fue registrado. ¡Gracias!')">Apoyar el proyecto del monumento →</button>
-  </div>
-
-  <!-- ENCUESTA -->
-  <div class="encuesta-box">
-    <div class="enc-titulo">¿Cómo quieres que se recuerde a los héroes?</div>
-    <div class="opciones" id="opciones">
-      <div class="opcion" onclick="selOpc(this,0)"><div class="opcion-dot"></div>🏛️ Con un monumento permanente en La Guaira</div>
-      <div class="opcion" onclick="selOpc(this,1)"><div class="opcion-dot"></div>📖 Con un libro de testimonios oficial</div>
-      <div class="opcion" onclick="selOpc(this,2)"><div class="opcion-dot"></div>🎓 Con una beca educativa en su honor</div>
-      <div class="opcion" onclick="selOpc(this,3)"><div class="opcion-dot"></div>🌳 Con un parque o espacio verde público</div>
-      <div class="opcion" onclick="selOpc(this,4)"><div class="opcion-dot"></div>📅 Con una fecha conmemorativa anual</div>
-    </div>
-    <button class="btn-votar" onclick="votar()">Votar</button>
-    <div class="resultado" id="resultado"></div>
-  </div>
-
-  <!-- TESTIMONIOS -->
-  <div class="testimonios-box">
-    <div class="test-titulo">Comparte tu historia</div>
-    <p class="test-desc">Si fuiste rescatista, sobreviviente, voluntario o familiar — tu historia merece ser contada. Cuéntanosla aquí.</p>
-    <div class="aviso-verificacion">✅ Toda historia enviada será revisada antes de publicarse. Tu privacidad es importante — puedes elegir publicar con nombre o de forma anónima.</div>
-    <input type="text" class="campo" placeholder="Tu nombre (o escribe 'Anónimo')">
-    <input type="text" class="campo" placeholder="Tu rol: sobreviviente, rescatista, voluntario, familiar...">
-    <input type="text" class="campo" placeholder="Zona donde estuviste">
-    <input type="email" class="campo" placeholder="Tu correo (para contactarte si queremos publicar tu historia)">
-    <select class="campo">
-      <option value="">¿Cómo deseas publicar tu historia?</option>
-      <option>Con mi nombre completo</option>
-      <option>Solo con mi nombre de pila</option>
-      <option>De forma anónima</option>
-      <option>Solo para archivo, no publicar</option>
-    </select>
-    <textarea class="campo" style="min-height:150px" placeholder="Cuéntanos tu historia. ¿Qué viviste? ¿Qué viste? ¿Cómo te sentiste? No hay historia pequeña — todas importan..."></textarea>
-    <button class="btn-registrar" onclick="alert('¡Gracias por compartir tu historia! La recibiremos con el respeto y la seriedad que merece. Nos pondremos en contacto contigo.')">Enviar mi historia →</button>
-    <p class="aviso">Tu historia será revisada con respeto y cuidado antes de cualquier publicación. Tienes el control sobre cómo aparece.</p>
-  </div>
-
-  <!-- BANNER INFERIOR -->
-  <div class="banner-lateral">
-    <div class="bl-tipo">Banner Inferior · Publicidad</div>
-    <div class="bl-tit">Tu empresa aquí</div>
-    <div class="bl-dim">📐 970 × 90 px · Banner horizontal inferior · <a href="mailto:propuestaspararenacer@gmail.com?subject=Publicidad Heroes Inferior" style="color:var(--verde)">Reservar →</a></div>
-  </div>
-
 </div>
-
 <footer>
-  <strong>La Guaira que Viene</strong> · Página ciudadana no gubernamental<br>
-  En honor a todos los que respondieron · En solidaridad con todos los que sobrevivieron<br>
-  <a href="mailto:propuestaspararenacer@gmail.com">propuestaspararenacer@gmail.com</a> · <a href="index.html">← Volver al inicio</a>
+  <p>🌊 <strong style="color:#fff">La Guaira que Viene</strong> · <a href="index.html">Volver al inicio</a><br>
+  Marca Acas · <a href="mailto:propuestaspararenacer@gmail.com">propuestaspararenacer@gmail.com</a></p>
 </footer>
-
-<script>
-var sel=null,datos=[42,18,15,14,11];
-function selOpc(el,i){
-  document.querySelectorAll('.opcion').forEach(function(x){x.classList.remove('sel')});
-  el.classList.add('sel');sel=i;
-}
-function votar(){
-  if(sel===null){alert('Selecciona una opción primero');return}
-  datos[sel]++;
-  var total=datos.reduce(function(a,b){return a+b},0);
-  var labels=['Monumento permanente','Libro de testimonios','Beca educativa','Parque público','Fecha conmemorativa'];
-  var r=document.getElementById('resultado');
-  r.style.display='block';
-  r.innerHTML='<div style="font-size:.75rem;font-weight:600;color:var(--azul);margin-bottom:.8rem">Resultados:</div>';
-  datos.forEach(function(v,i){
-    var pct=Math.round(v/total*100);
-    r.innerHTML+='<div class="res-item"><div class="res-label"><span>'+labels[i]+'</span><span>'+pct+'%</span></div><div class="barra-bg"><div class="barra-fill" style="width:'+pct+'%"></div></div></div>';
-  });
-  document.querySelector('.btn-votar').textContent='¡Gracias por votar!';
-}
-</script>
 </body>
 </html>
