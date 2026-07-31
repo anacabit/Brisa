@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -101,7 +101,7 @@ nav {
   color:var(--gris); margin-bottom:3rem; text-align:center;
 }
 .grid {
-  display:grid;¥
+  display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:2px;
   border:1px solid var(--borde);
@@ -112,7 +112,6 @@ nav {
   transition:background .2s;
   position:relative;
 }
-.card:hover { background:var(--gris-claro); }
 .card:hover { background:var(--gris-claro); }
 .card-num {
   font-size:0.65rem; letter-spacing:0.15em; color:var(--naranja);
@@ -151,10 +150,19 @@ nav {
   font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase;
   color:var(--naranja); margin-bottom:2rem; display:block;
 }
-.editorial h2 {
+.editorial-titulo {
   font-family:'Playfair Display',serif;
   font-size:clamp(1.4rem,4vw,2rem);
-  color:var(--azul); margin-bottom:1.5rem; line-height:1.3;
+  color:var(--azul); margin-bottom:1rem; line-height:1.3;
+}
+.editorial-bajada {
+  font-size:0.95rem; color:var(--gris); font-style:italic;
+  line-height:1.8; margin-bottom:2rem;
+  padding-bottom:1.5rem; border-bottom:1px solid var(--borde);
+}
+.editorial-fecha {
+  font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--gris); margin-bottom:2rem; display:block;
 }
 .editorial p {
   font-size:0.9rem; color:var(--gris-oscuro);
@@ -163,7 +171,7 @@ nav {
 .editorial-firma {
   margin-top:2.5rem; padding-top:1.5rem;
   border-top:1px solid var(--borde);
-  font-size:0.78rem; color:var(--gris);
+  font-size:0.78rem; color:var(--gris); line-height:2;
 }
 
 /* PIE */
@@ -243,31 +251,31 @@ footer a { color:#4de88a; text-decoration:none; }
     </a>
     <a class="card" href="ebook.html">
       <span class="card-num">02 · Ebook</span>
-      <h2>Construir el Futuro</h2>
+      <h2>Construir el futuro</h2>
       <p>Datos, récords y tecnologías de construcción mundial. Lo que Venezuela y La Guaira pueden aplicar hoy.</p>
       <span class="card-arrow">Leer →</span>
     </a>
     <a class="card" href="edificios.html">
       <span class="card-num">03 · Edificios</span>
-      <h2>30 Edificios en Menos de un Año</h2>
+      <h2>30 edificios en menos de un año</h2>
       <p>Lista completa de estructuras construidas en tiempo récord en todo el mundo. La velocidad como herramienta.</p>
       <span class="card-arrow">Ver lista →</span>
     </a>
     <a class="card" href="ciudad.html">
-      <span class="card-num">04 · Ciudad Modelo</span>
-      <h2>Nueva Ciudad del Centro</h2>
+      <span class="card-num">04 · Ciudad modelo</span>
+      <h2>Nueva ciudad del centro</h2>
       <p>Una ciudad futurista entre Caracas y Maracay. Conectada, moderna, con trabajo y riqueza que se queda adentro.</p>
       <span class="card-arrow">Leer propuesta →</span>
     </a>
     <a class="card" href="encuestas.html">
       <span class="card-num">05 · Encuestas</span>
-      <h2>Tu Voz Cuenta</h2>
+      <h2>Tu voz cuenta</h2>
       <p>¿Qué proyecto es más urgente? ¿Qué energía prefieres? ¿Qué espacio público necesitas? Vota y el resultado llega al buzón.</p>
       <span class="card-arrow">Participar →</span>
     </a>
     <a class="card" href="proyectos.html">
       <span class="card-num">06 · Proyectos</span>
-   <h2> Propuestas con Costos Reales</h2>
+      <h2>Propuestas con costos reales</h2>
       <p>Vivienda sismo-resistente, energía solar, agua potable, escuelas modulares. Cada proyecto con cifras y plazos concretos.</p>
       <span class="card-arrow">Ver proyectos →</span>
     </a>
@@ -283,31 +291,23 @@ footer a { color:#4de88a; text-decoration:none; }
   <img src="fotos/guaira-playa1.jpg" alt="Playa">
   <img src="fotos/guaira-rueda.jpg" alt="Rueda panorámica">
 </div>
-24 de junio de 2026
+
 <!-- EDITORIAL -->
 <section class="editorial">
-  <span class="editorial-tag">✍️ Brisa Citadina ·Editorial 
-      <div class="art-titulo">
-       <h2> Una plataforma ciudadana que apuesta por la reconstrucción de La Guaira?<h2> </div>
-      <p class="art-bajada"> Esta página nació de la convicción de que cada ciudadano tiene algo que aportar. No somos ingenieros ni arquitectos — somos personas que creen que las ideas importan.</p>
-      <div class="art-meta"> · </div>
-      <div class="columnas">
-        <p>El 24 de junio de 2026, La Guaira vivió una de las tragedias más grandes de su historia. En cuestión de minutos, edificios que habían sido hogares durante décadas se convirtieron en escombros. El litoral central venezolano quedó marcado para siempre.</p>
-        <p>Pero en medio de ese dolor, algo extraordinario ocurrió. Ciudadanos de todas partes respondieron. Rescatistas llegaron desde El Salvador, México, Estados Unidos, Italia, Brasil, Venezuela y otros países que también respondieron al llamado solidario. Voluntarios sin entrenamiento cavaron con sus manos. Las ONG supieron exactamente qué hacer cuando más se necesitaba.</p>
-        <p>Esta página no nació para documentar el dolor. Nació para mirar hacia adelante. Para preguntarle a la gente qué quiere que sea La Guaira. Para recoger ideas, propuestas y sueños de quienes conocen ese litoral mejor que nadie: sus propios habitantes.</p>
-        <p>Aquí encontrarás encuestas, proyectos, zonas de reconstrucción, ideas ciudadanas y ejemplos de ciudades del mundo que transformaron sus tragedias en oportunidades. Todo lo que se publique aquí viene de la comunidad y vuelve a ella.</p>
-      </div>
-    </div>
-
-    <div class="separador">
-      <div class="sep-linea"></div>
-      <div class="sep-texto">Últimas noticias</div>
-      <div class="sep-linea"></div>
-    </div>
+  <span class="editorial-tag">✍️ Brisa Citadina · Editorial</span>
+  <h2 class="editorial-titulo">Una plataforma ciudadana que apuesta por la reconstrucción de La Guaira</h2>
+  <p class="editorial-bajada">Esta página nació de la convicción de que cada ciudadano tiene algo que aportar. No somos ingenieros ni arquitectos — somos personas que creen que las ideas importan.</p>
+  <span class="editorial-fecha">24 de junio de 2026</span>
+  <p>El 24 de junio de 2026, La Guaira vivió una de las tragedias más grandes de su historia. En cuestión de minutos, edificios que habían sido hogares durante décadas se convirtieron en escombros. El litoral central venezolano quedó marcado para siempre.</p>
+  <p>Pero en medio de ese dolor, algo extraordinario ocurrió. Ciudadanos de todas partes respondieron. Rescatistas llegaron desde El Salvador, México, Estados Unidos, Italia, Brasil, Venezuela y otros países que también respondieron al llamado solidario. Voluntarios sin entrenamiento cavaron con sus manos. Las ONG supieron exactamente qué hacer cuando más se necesitaba.</p>
+  <p>Esta página no nació para documentar el dolor. Nació para mirar hacia adelante. Para preguntarle a la gente qué quiere que sea La Guaira. Para recoger ideas, propuestas y sueños de quienes conocen ese litoral mejor que nadie: sus propios habitantes.</p>
+  <p>Aquí encontrarás encuestas, proyectos, zonas de reconstrucción, ideas ciudadanas y ejemplos de ciudades del mundo que transformaron sus tragedias en oportunidades. Todo lo que se publique aquí viene de la comunidad y vuelve a ella.</p>
+  <div class="editorial-firma">
     Página ciudadana no gubernamental · La Guaira, Venezuela · Julio 2026<br>
     Marca <strong style="color:var(--azul)">Acas</strong> · <a href="mailto:propuestaspararenacer@gmail.com" style="color:var(--naranja)">propuestaspararenacer@gmail.com</a>
   </div>
 </section>
+
 <!-- PIE -->
 <footer>
   <p>
@@ -327,3 +327,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 </script>
 </body>
 </html>
+Of 
